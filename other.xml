@@ -1,0 +1,34 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Blade files</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="RecentTaskRepositories">
+    <JIRA shared="false" url="https://liveintent.atlassian.net">
+      <option name="apiType" value="REST_2_0" />
+      <commitMessageFormat>[{id}] {summary}</commitMessageFormat>
+      <password>df9ddfc3dfc4dfcedfdddfc9dfcfdfc6df84df9edfdddfd9dfcbdfcfdfcedfc7dfcedf90dfe6dfe3dfe9</password>
+      <option name="jiraVersion" value="7.0.0-OD-08-002" />
+      <option name="loginAnonymously" value="false" />
+      <option name="preferredCloseTaskState" />
+      <option name="preferredOpenTaskState" />
+      <option name="searchQuery" value="project = LSD AND issuetype in standardIssueTypes() AND status in (&quot;To Develop&quot;, &quot;In Development&quot;) AND assignee in (EMPTY, currentUser()) ORDER BY cf[10105] ASC" />
+      <option name="shouldFormatCommitMessage" value="true" />
+      <option name="useHttpAuthentication" value="false" />
+      <option name="useProxy" value="false" />
+      <username>luciano.longo</username>
+    </JIRA>
+  </component>
+</application>

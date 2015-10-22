@@ -1,0 +1,611 @@
+<templateSet group="LSD">
+  <template name="cdoc" value="/**&#10; * $DESC$&#10; *&#10; * @package $PACKAGE$&#10; * @subpackage $SUBPACKAGE$$END$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */" description="Add class docblock" toReformat="false" toShortenFQNames="true">
+    <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="fdoc" value="/**&#10; * LiveIntent $DESC$&#10; *&#10; * @package $PACKAGE$&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;" description="Add file docblock" toReformat="false" toShortenFQNames="true">
+    <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="out" value="/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\$ACTION$;&#10;&#10;require_once('Core/IOutput.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $ACTION$ Abstract Output&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;abstract class AOutput implements \Core\IOutput {&#10;    $END$&#10;}&#10;" description="Generic command output" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="outjson" value="&lt;?php&#10;/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\$ACTION$\Input;&#10;&#10;require_once('Api/$SUBPACKAGE$/$ACTION$/AInput.php');&#10;require_once('Core/Output/IJson.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $ACTION$ Json Input&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;class Json extends \Api\$SUBPACKAGE$\$ACTION$\AInput implements \Core\Output\IJson&#10;{&#10;    use \Core\Input\Parse\Json;&#10;}&#10;" description="Json command output" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="tcdoc" value="/**&#10; * $DESC$&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */" description="Add test class docblock" toReformat="false" toShortenFQNames="true">
+    <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="tfdoc" value="/**&#10; * LiveIntent TEST&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;" description="Add test file docblock" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="igt" value="/**&#10; * Get $INPUT$&#10; * @return $TYPE$&#10; */&#10;public function get$INPUT_CAPS$()&#10;{&#10;    return $this-&gt;data()-&gt;get('$INPUT$');&#10;}&#10;$END$" description="Input Getter" toReformat="false" toShortenFQNames="true">
+    <variable name="INPUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INPUT_CAPS" expression="capitalize(INPUT)" defaultValue="" alwaysStopAt="false" />
+    <variable name="TYPE" expression="enum(&quot;string&quot;,&quot;int&quot;, &quot;float&quot;, &quot;bool&quot;, &quot;array&quot;, &quot;null&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ainput" value="/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\$ACTION$;&#10;&#10;require_once('Core/AInput.php');&#10;require_once('Core/Input/IParse.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $ACTION$ Abstract Input&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;abstract class AInput extends \Core\AInput implements \Core\Input\IParse {&#10;&#10;    /**&#10;     * Initialization method&#10;     */&#10;    protected function _init()&#10;    {&#10;        $this-&gt;structure()&#10;            -&gt;defineMap('$MAP$', '$RULE$');&#10;    }&#10;}&#10;" description="Command Abstract Input" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MAP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="injson" value="/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\$ACTION$\Input;&#10;&#10;require_once('Api/$SUBPACKAGE$/$ACTION$/AInput.php');&#10;require_once('Core/Input/Parse/Json.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $ACTION$ Json Input&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;class Json extends \Api\$SUBPACKAGE$\$ACTION$\AInput&#10;{&#10;    use \Core\Input\Parse\Json;&#10;}" description="Command Json Input" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="cmd" value="/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\$ACTION$;&#10;&#10;require_once('Core/ACommand.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $ACTION$ Command Class&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;class Command extends \Core\ACommand&#10;{&#10;    /**&#10;     * Runs command&#10;     */&#10;    protected function _run()&#10;    {&#10;        $END$&#10;    }&#10;}" description="Command" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="rule" value="/**&#10; * LiveIntent CORE&#10; *&#10; * @package Core&#10; * @subpackage Rule&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Core\Rule\$PACKAGE$;&#10;&#10;require_once('Core/Rule/A$RULE_TYPE$.php');&#10;&#10;/**&#10; * $PACKAGE$ $RULE$ Rule Class&#10; *&#10; * @package Core&#10; * @subpackage Rule&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;class $RULE$ extends \Core\Rule\A$RULE_TYPE$ {&#10;&#10;    /**&#10;     * Constructor&#10;     */&#10;    public function __construct() {&#10;        $END$;&#10;    }&#10;&#10;}" description="Rule Class" toReformat="false" toShortenFQNames="true">
+    <variable name="PACKAGE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE_TYPE" expression="enum(&quot;String&quot;, &quot;Numeric&quot;, &quot;Enumeration&quot;, &quot;List&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ginput" value="/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\Get;&#10;&#10;require_once('Core/Input/AGet.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ Get Input&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;class Input extends \Core\Input\AGet {&#10;&#10;}&#10;" description="GET Command Input" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="sinput" value="/**&#10; * LiveIntent API&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Api\$SUBPACKAGE$\Search;&#10;&#10;require_once('Core/Input/ASearch.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ Search Input&#10; *&#10; * @package Api&#10; * @subpackage $SUBPACKAGE$&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;class Input extends \Core\Input\ASearch {&#10;&#10;}&#10;" description="SAVE Command Input" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="dmap" value="-&gt;defineMap('$FIELD$', '$PACKAGE$\$FIELD_CAPITALIZED$')" description="Define map" toReformat="false" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD_CAPITALIZED" expression="capitalize(FIELD)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="dmapreq" value="-&gt;defineMap('$FIELD$', '$PACKAGE$\$FIELD_CAPITALIZED$')&#10;    -&gt;defineRequired('$FIELD$')" description="Define map required" toReformat="false" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD_CAPITALIZED" expression="capitalize(FIELD)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ruletest" value="/**&#10; * LiveIntent TEST&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Test\Core\Rule\$SUBPACKAGE$;&#10;&#10;include_once(substr(__FILE__, 0, (strpos(__FILE__, 'tests') + 5)) . '/init.php');&#10;require_once('Core/Rule/$SUBPACKAGE$/$RULE$.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $RULE$ Rule Test&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;class $RULE$Test extends \PHPUnit_Framework_TestCase {&#10;&#10;    /**&#10;     * Test use cases&#10;     * @param mixed $value&#10;     * @param bool $expected&#10;     * @dataProvider providerUses&#10;     */&#10;    public function testUses($value, $expected) {&#10;        $rule = new \Core\Rule\$SUBPACKAGE$\$RULE$();&#10;        $this-&gt;assertEquals($expected, $rule-&gt;apply($value));&#10;    }&#10;&#10;    /**&#10;     * Provider for testUses&#10;     * @return array&#10;     */&#10;    public function providerUses() {&#10;        return [&#10;            [null, false],&#10;            [true, false],&#10;            [1234, false],&#10;            ['fu', false],&#10;            ['foo', true],$END$&#10;        ];&#10;    }&#10;}" description="Rule Test Class" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="rule:l" value="/**&#10; * LiveIntent CORE&#10; *&#10; * @package Core&#10; * @subpackage Rule&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Core\Rule\$PACKAGE$;&#10;&#10;require_once('Core/Rule/AList.php');&#10;&#10;/**&#10; * $PACKAGE$ $RULE$ Rule Class&#10; *&#10; * @package Core&#10; * @subpackage Rule&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;class $RULE$ extends \Core\Rule\AList {&#10;&#10;    protected function _init()&#10;    {&#10;        $END$;&#10;    }&#10;&#10;}" description="List Rule Class" toReformat="false" toShortenFQNames="true">
+    <variable name="PACKAGE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="dmapn" value="-&gt;defineMap('$FIELD$', '$RULE$')" description="Define map with [n]ative rule" toReformat="false" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="enum(&quot;Id&quot;, &quot;Hash&quot;, &quot;Boolean&quot;, &quot;Email&quot;, &quot;Date&quot;, &quot;DateTime&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="igt:is" value="/**&#10; * Is $INPUT$&#10; * @return bool&#10; */&#10;public function is$INPUT_CAPS$()&#10;{&#10;    return $this-&gt;data()-&gt;get('is$END$$INPUT_CAPS$');&#10;}&#10;$END$" description="Input Boolean Getter &quot;is&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="INPUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INPUT_CAPS" expression="capitalize(INPUT)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="igt:has" value="/**&#10; * Has $INPUT$&#10; * @return bool&#10; */&#10;public function has$INPUT_CAPS$()&#10;{&#10;    return $this-&gt;data()-&gt;get('has$END$$INPUT_CAPS$');&#10;}&#10;$END$" description="Input Boolean Getter &quot;has&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="INPUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INPUT_CAPS" expression="capitalize(INPUT)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ruletest:num" value="/**&#10; * LiveIntent TEST&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Test\Core\Rule\$SUBPACKAGE$;&#10;&#10;include_once(substr(__FILE__, 0, (strpos(__FILE__, 'tests') + 5)) . '/init.php');&#10;require_once('Core/Rule/$SUBPACKAGE$/$RULE$.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $RULE$ Rule Test&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;class $RULE$Test extends \PHPUnit_Framework_TestCase {&#10;&#10;    /**&#10;     * Test use cases&#10;     * @param mixed $value&#10;     * @param bool $expected&#10;     * @dataProvider providerUses&#10;     */&#10;    public function testUses($value, $expected) {&#10;        $rule = new \Core\Rule\$SUBPACKAGE$\$RULE$();&#10;        $this-&gt;assertEquals($expected, $rule-&gt;apply($value));&#10;    }&#10;&#10;    /**&#10;     * Provider for testUses&#10;     * @return array&#10;     */&#10;    public function providerUses() {&#10;        return [&#10;            [null, false],&#10;            [true, false],&#10;            ['foo', false],&#10;            [1234, $BOOL$],&#10;            [12.345, $BOOL$],&#10;            [12345678900, $BOOL$],&#10;            [1234567890, $BOOL$],&#10;            [12.34, $BOOL$],$END$&#10;        ];&#10;    }&#10;}" description="Numeric Rule Test Class" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <variable name="BOOL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ruletest:int" value="/**&#10; * LiveIntent TEST&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Test\Core\Rule\$SUBPACKAGE$;&#10;&#10;include_once(substr(__FILE__, 0, (strpos(__FILE__, 'tests') + 5)) . '/init.php');&#10;require_once('Core/Rule/$SUBPACKAGE$/$RULE$.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $RULE$ Rule Test&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;class $RULE$Test extends \PHPUnit_Framework_TestCase {&#10;&#10;    /**&#10;     * Test use cases&#10;     * @param mixed $value&#10;     * @param bool $expected&#10;     * @dataProvider providerUses&#10;     */&#10;    public function testUses($value, $expected) {&#10;        $rule = new \Core\Rule\$SUBPACKAGE$\$RULE$();&#10;        $this-&gt;assertEquals($expected, $rule-&gt;apply($value));&#10;    }&#10;&#10;    /**&#10;     * Provider for testUses&#10;     * @return array&#10;     */&#10;    public function providerUses() {&#10;        return [&#10;            [null, false],&#10;            [true, false],&#10;            ['foo', false],&#10;            [1234, true],&#10;            [12.345, false],&#10;            [12345678900, false],&#10;            [1234567890, true],&#10;            [12.34, false],$END$&#10;        ];&#10;    }&#10;}" description="Int Rule Test Class" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ruletest:float" value="/**&#10; * LiveIntent TEST&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;namespace Test\Core\Rule\$SUBPACKAGE$;&#10;&#10;include_once(substr(__FILE__, 0, (strpos(__FILE__, 'tests') + 5)) . '/init.php');&#10;require_once('Core/Rule/$SUBPACKAGE$/$RULE$.php');&#10;&#10;/**&#10; * $SUBPACKAGE$ $RULE$ Rule Test&#10; *&#10; * @package Test&#10; * @subpackage Unit&#10; * @author LiveIntent DEV &lt;development@liveintent.com&gt;&#10; * @copyright Copyright (c) LiveIntent&#10; */&#10;&#10;class $RULE$Test extends \PHPUnit_Framework_TestCase {&#10;&#10;    /**&#10;     * Test use cases&#10;     * @param mixed $value&#10;     * @param bool $expected&#10;     * @dataProvider providerUses&#10;     */&#10;    public function testUses($value, $expected) {&#10;        $rule = new \Core\Rule\$SUBPACKAGE$\$RULE$();&#10;        $this-&gt;assertEquals($expected, $rule-&gt;apply($value));&#10;    }&#10;&#10;    /**&#10;     * Provider for testUses&#10;     * @return array&#10;     */&#10;    public function providerUses() {&#10;        return [&#10;            [null, false],&#10;            [true, false],&#10;            ['foo', false],&#10;            [1234, true],&#10;            [12.345, false],&#10;            [1234567890, true],&#10;            [12345678900, false],&#10;            [12.34, true],$END$&#10;        ];&#10;    }&#10;}" description="Float Rule Test Class" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBPACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="dreq" value="-&gt;defineRequired('$SELECTION$')" description="Define required" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="dmapreqn" value="-&gt;defineMap('$FIELD$', '$RULE$')&#10;    -&gt;defineRequired('$FIELD$')" description="Define required map with [n]ative rule" toReformat="false" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RULE" expression="enum(&quot;Id&quot;, &quot;Hash&quot;, &quot;Boolean&quot;, &quot;Email&quot;, &quot;Date&quot;, &quot;DateTime&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="tkey" value="/**&#10; * Test &quot;$KEY$&quot;&#10; * @param \Core\Model\IStructure $structure&#10; * @depends testSetup&#10; */&#10;public function testSetup$KEY_UPPER$(\Core\Model\IStructure $structure)&#10;{&#10;    $key = $structure-&gt;getKey('$KEY$');&#10;&#10;    $this-&gt;assertEquals($RULE$, $key['rule']);&#10;    $this-&gt;assertEquals('$COL$', $key['column']);&#10;    $this-&gt;assertEquals($DEF$, $key['default']);&#10;    $this-&gt;assertEquals($RO$, $key['readOnly']);&#10;    $this-&gt;assertEquals($NULL$, $key['nullable']);&#10;    $this-&gt;assertEquals($REQ$, $structure-&gt;isRequired('$KEY$'));&#10;    $this-&gt;assertEquals($SEL$, $structure-&gt;isSearchSelect('$KEY$'));&#10;    $this-&gt;assertEquals($WHERE$, $structure-&gt;isSearchWhere('$KEY$'));&#10;    $this-&gt;assertEquals($ORD$, $structure-&gt;isSearchOrder('$KEY$'));&#10;}" description="Structure key test method" toReformat="false" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="KEY_UPPER" expression="capitalize(KEY)" defaultValue="" alwaysStopAt="false" />
+    <variable name="RULE" expression="enum(&quot;null&quot;, &quot;true&quot;, &quot;false&quot;, &quot;'Id'&quot;, &quot;'Hash'&quot;, &quot;'Boolean'&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="COL" expression="snakeCase(KEY)" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEF" expression="enum(&quot;null&quot;, &quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="RO" expression="enum(&quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="NULL" expression="enum(&quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="REQ" expression="enum(&quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEL" expression="enum(&quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="WHERE" expression="enum(&quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORD" expression="enum(&quot;false&quot;, &quot;true&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>
